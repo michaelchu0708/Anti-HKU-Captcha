@@ -10,6 +10,7 @@ It is a captcha breaker developed to bypass [SimpleCaptcha] validation on `HKU p
 This document will cover:
   - Methodology and Observation
   - Implementation with test
+  - Run
   - Magic (maybe)
   
   
@@ -103,7 +104,7 @@ digit6 (Dense)                  (None, 34)           87074       dropout_4[0][0]
 ```
 
 
-### Installation
+### Run
 
 - Install the required libraries
 - (Optional) Put training/testing data into `/Sample/Training` and `/Sample/Valid` with ground true as answer.csv in each folder.
@@ -132,6 +133,7 @@ python temp.py {HKU UID} {PASSWORD}
 ### Todos
 
  - Complete guide of data generating
+ - Dependencies
  - finish web booking automation.
 
 License
