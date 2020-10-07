@@ -2,17 +2,19 @@
 #### Breaking HKU CSE facility booking captcha validation by CNN model.
 
 It is a captcha breaker developed to bypass [SimpleCaptcha] validation on `HKU portal - CSE booking system` by machine learning model.
-![image of HKU CSE booking portal](./preview_image_git/Booking_page)
+<img src="./preview_image_git/Booking_page.png" width="500" height="auto"/>
 
 
-![video of maxing selecnium](./preview_image_git/video_1.gif)
-![video of sampe run](./preview_image_git/video_2.gif)
 
 This document will cover:
   - Methodology and Observation
   - Implementation with test
   - Magic (maybe)
   
+  
+![video of maxing selecnium](./preview_image_git/video_1.gif)
+![video of sampe run](./preview_image_git/video_2.gif)
+
 
 # Observation and Methodology
 By inspecting the captcha input column, it shows that the `SimpleCaptcha` is being used and it is a **dynamic captcha**, i.e.: *captcha changes by every web request*.
