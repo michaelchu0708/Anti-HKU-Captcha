@@ -36,7 +36,7 @@ By observation, HKU CSE seems to setting up with same format in every captcha:
 The generator now can by those parameters above to generate enough sample to the model.
 
 ### CNN Model
-Consider the input image is given with *(50, 200, 3) shape*, and the complexity of the captcha is, as above shown, small. So there will be `3 blocks of (Conv layer + Conv layer + Max-pool layer)` each convolutional layer with *kernel_size (3, 3)* and `1 (Conv layer + Max-pool layer)`, combine with **6 output where corresponding to 6 digits** with `softmax` classififers (possibilities) each with `10 neurons` (0-9).
+Consider the input image is given with *(50, 200, 3) shape*, and the complexity of the captcha is, as above shown, small. So there will be `3 blocks of (Conv layer + Conv layer + Max-pool layer)` each convolutional layer with *kernel_size (3, 3)* and `1 (Conv layer + Max-pool layer)`, combine with **6 output where corresponding to 6 digits** with `softmax` classififers (possibilities) each with `34 neurons` (0-9a-z) ~~only digit will consider~~.
 
 The model will be using ```accuracy``` as the only metric, ~~**goal is to predict the digits**, ```loss``` will be considered only when it is very unstable in the performance, be practical~~ Where `loss` using `categorical_crossentropy` that is commonly used in softmax loss.
 
