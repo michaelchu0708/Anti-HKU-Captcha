@@ -2,6 +2,7 @@
 #### Breaking HKU CSE facility booking captcha validation by CNN model.
 
 It is a captcha breaker developed to bypass [SimpleCaptcha] validation on `HKU portal - CSE booking system` by machine learning model.
+
 <img src="./preview_image_git/Booking_page.png" width="500" height="auto"/>
 
 
