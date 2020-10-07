@@ -27,7 +27,7 @@ Thanks to `SimpleCaptcha` open-source effort, sampling can be done by using gene
 
 By observation, HKU CSE seems to setting up with same format in every captcha:
 - Constantly **6 digits only** with #FFF color
-- fixed number of noise, **2 lines with #000 and #FFF crossed the numbers** from random location
+- fixed number of noise, **2 fixed color lines crossed the numbers** from random location
 - fixed background gradient, **from #CCC - #FFF**
 
 ![image of captcha 1](preview_image_git/preview_1.png)
