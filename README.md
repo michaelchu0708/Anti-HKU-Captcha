@@ -27,7 +27,7 @@ Machine learning, ideally CNN model, is purposed to use to bypass the captcha va
 Thanks to `SimpleCaptcha` open-source effort, sampling can be done by using generator in `SimpleCaptcha` library. 
 
 By observation, HKU CSE seems to setting up with same format in every captcha:
-- Constantly **6 char only** with #FFF color
+- Constantly **6 char (0-9a-z) only** with #FFF color
 - fixed number of noise, **2 fixed color lines crossed the numbers** from random location
 - fixed background gradient, **from #CCC - #FFF**
 
@@ -39,7 +39,7 @@ The generator now can by those parameters above to generate enough sample to the
 ### CNN Model
 Consider the input image is given with *(50, 200, 3) shape*, and the complexity of the captcha is, as above shown, small. So there will be `3 blocks of (Conv layer + Conv layer + Max-pool layer)` each convolutional layer with *kernel_size (3, 3)* and `1 (Conv layer + Max-pool layer)`, combine with **6 output where corresponding to 6 digits** with `softmax` classififers (possibilities) each with `34 neurons` (0-9a-z).
 
-The model will be using ```accuracy``` as the only metric, ~~**goal is to predict the digits**, ```loss``` will be considered only when it is very unstable in the performance, be practical~~ Where `loss` using `categorical_crossentropy` that is commonly used in softmax loss.
+The model will be using ```accuracy``` as the only metric, ~~**goal is to predict the characters**, metric in ```loss``` will be considered only when it is very unstable in the performance, be practical~~ Where `loss` using `categorical_crossentropy` that is commonly used in softmax loss.
 
 ![Image of model](./preview_image_git/model.png)
 
